@@ -1,0 +1,129 @@
+[
+    {
+        "deviceModelId": "Test-Sensor-ID-Occupancy-Sensor",
+        "deviceModelName": "Room Occupancy Sensor",
+        "deviceModelDesc": "Monitors indoor air quality by measuring levels of Carbon Dioxide (CO2), temperature, and humidity.",
+        "deviceProperties": [
+            {
+                "propertyId": "Occupied",
+                "propertyName": "Occupied",
+                "propertyDesc": "Whether or not a room is occupied",
+                "propertyType": "bool",
+                "propertyUnit": "yes/no",
+                "rangeMin": "0",
+                "rangeMax": "1"
+            },
+            {
+                "propertyId": "Occupancy Percentage",
+                "propertyName": "Occupancy Percentage",
+                "propertyDesc": "the percentage amount of time the object has been occupied given the chosen timeframe",
+                "propertyType": "double",
+                "propertyUnit": "%",
+                "rangeMin": "0",
+                "rangeMax": "100"
+            }
+        ]
+    },
+    {
+        "deviceModelId": "d370a293-4bd5-4bdb-a3df-376dc131d44c",
+        "deviceModelName": "Human Comfort Sensor",
+        "deviceModelDesc": "Monitors indoor air quality by measuring levels of Carbon Dioxide (CO2), temperature, and humidity.",
+        "deviceProperties": [
+            {
+                "propertyId": "Temperature",
+                "propertyName": "Temperature",
+                "propertyDesc": "External temperature in Fahrenheit",
+                "propertyType": "double",
+                "propertyUnit": "Celsius",
+                "rangeMin": "18.00",
+                "rangeMax": "28.00"
+            },
+            {
+                "propertyId": "Humidity",
+                "propertyName": "Humidity",
+                "propertyDesc": "Relative humidity in percentage",
+                "propertyType": "double",
+                "propertyUnit": "%RH",
+                "rangeMin": "23.09",
+                "rangeMax": "49.09"
+            },
+            {
+                "propertyId": "CO₂",
+                "propertyName": "CO₂",
+                "propertyDesc": "Level of carbon dioxide (CO₂)",
+                "propertyType": "double",
+                "propertyUnit": "ppm",
+                "rangeMin": "482.81",
+                "rangeMax": "640.00"
+            }
+        ]
+    },
+    {
+        "deviceModelId": "Energy-Usage-Sensor",
+        "deviceModelName": "Energy Usage Sensor",
+        "deviceModelDesc": "",
+        "deviceProperties": [
+            {
+                "propertyId": "Voltage",
+                "propertyName": "Voltage",
+                "propertyDesc": "",
+                "propertyType": "double",
+                "propertyUnit": "V",
+                "rangeMin": "0",
+                "rangeMax": "1000"
+            },
+            {
+                "propertyId": "Current",
+                "propertyName": "Current",
+                "propertyDesc": "",
+                "propertyType": "double",
+                "propertyUnit": "A",
+                "rangeMin": "0",
+                "rangeMax": "1000"
+            },
+            {
+                "propertyId": "Power",
+                "propertyName": "Power",
+                "propertyDesc": "Voltage x Current / 1000",
+                "propertyType": "double",
+                "propertyUnit": "kW",
+                "rangeMin": "0",
+                "rangeMax": "1000"
+            },
+            {
+                "propertyId": "Total Energy Consumption",
+                "propertyName": "Total Energy Consumption",
+                "propertyDesc": "Average 'Power' value from across selected timeframe, multiplied by the selected amount of time in hours",
+                "propertyType": "double",
+                "propertyUnit": "kWh",
+                "rangeMin": "0",
+                "rangeMax": "500000"
+            }
+        ]
+    },
+    {
+        "deviceModelId": "GeneralRoomSensor",
+        "deviceModelName": "General Room Sensor",
+        "deviceModelDesc": "",
+        "deviceProperties": [
+            {
+                "propertyId": "Room Occupancy",
+                "propertyName": "Room Occupancy",
+                "propertyDesc": "Uses already existing ocucpancy sensors to calculate the supposed max occupancy of the room",
+                "propertyType": "integer",
+                "propertyUnit": "",
+                "rangeMin": "0",
+                "rangeMax": "10"
+            },
+            {
+                "propertyId": "Room Energy Usage",
+                "propertyName": "Room Energy Usage",
+                "propertyDesc": "Totals up the energy uses for each other energy sensor in the room",
+                "propertyType": "double",
+                "propertyUnit": "",
+                "rangeMin": "0",
+                "rangeMax": "10"
+            }
+        ]
+    }
+]

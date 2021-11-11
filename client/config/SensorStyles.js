@@ -3,6 +3,8 @@ import circleHighlightedSvg from "../../assets/images/circle_highlighted.svg";
 import temperatureSvg from "../../assets/images/temperature_property.svg";
 import humiditySvg from "../../assets/images/humidity_property.svg";
 import co2Svg from "../../assets/images/co2_property.svg";
+import OccuSvg from "../../assets/images/occupancy.svg";
+import groupOccuSvg from "../../assets/images/occupancy2.svg";
 
 export const SpriteSize = 24;
 
@@ -27,12 +29,16 @@ export const SensorStyleDefinitions = {
  * details.
  */
 export const PropIdGradientMap = {
+    Occupied: [0x00ff00, 0xff0000],
+    "Occupancy Percentage": [0xFF8844, 0x88FF44],
     Temperature: [0x0000ff, 0x00ff00, 0xffff00, 0xff0000],
     Humidity: [0x00f260, 0x0575e6],
     "CO₂": [0x1e9600, 0xfff200, 0xff0000],
 };
 
 export const PropertyIconMap = {
+    Occupied: OccuSvg,
+    "Occupancy Percentage": groupOccuSvg,
     Temperature: temperatureSvg,
     Humidity: humiditySvg,
     "CO₂": co2Svg,

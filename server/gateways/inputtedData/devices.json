@@ -1,0 +1,1678 @@
+[
+    {
+        "deviceModelId": "Test-Sensor-ID-Occupancy-Sensor",
+        "deviceInfo": [
+            {
+                "id": "Occupancy-1",
+                "name": "Occupancy Sensor 1",
+                "position": {
+                    "x":  "0",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L00",
+                "dbId": 7621,
+                "lastActivityTime": "2020-10-15T02:43:07.8094150Z"
+            },
+            {
+                "id": "Occupancy-2",
+                "name": "Occupancy Sensor 2",
+                "position": {
+                    "x":  "0",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L00",
+                "dbId": 14630,
+                "lastActivityTime": "2020-10-15T02:43:07.8094150Z"
+            },
+            {
+                "id": "Occupancy-3",
+                "name": "Occupancy Sensor 3",
+                "position": {
+                    "x":  "-2.29658889770508",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L00",
+                "dbId": 14636,
+                "lastActivityTime": "2020-10-15T02:43:07.8094150Z"
+            },
+            {
+                "id": "Occupancy-4",
+                "name": "Occupancy Sensor 4",
+                "position": {
+                    "x":  "0",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L00",
+                "dbId": 33971,
+                "lastActivityTime": "2020-10-15T02:43:07.8094150Z"
+            },
+            {
+                "id": "Occupancy-5",
+                "name": "Occupancy Sensor 5",
+                "position": {
+                    "x":  "0",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L00",
+                "dbId": 33978,
+                "lastActivityTime": "2020-10-15T02:43:07.8094150Z"
+            },
+            {
+                "id": "Occupancy-6",
+                "name": "Occupancy Sensor 6",
+                "position": {
+                    "x":  "0",
+                    "y": " 2.29658889770508",
+                    "z": " 0"
+                },
+                "floorId": "L00",
+                "dbId": 33983,
+                "lastActivityTime": "2020-10-15T02:43:07.8094150Z"
+            },
+            {
+                "id": "Occupancy-7",
+                "name": "Occupancy Sensor 7",
+                "position": {
+                    "x":  "0",
+                    "y": " -2.29658889770508",
+                    "z": " 0"
+                },
+                "floorId": "L00",
+                "dbId": 33989,
+                "lastActivityTime": "2020-10-15T02:43:07.8094150Z"
+            },
+            {
+                "id": "Occupancy-8",
+                "name": "Occupancy Sensor 8",
+                "position": {
+                    "x":  "0",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L00",
+                "dbId": 33994,
+                "lastActivityTime": "2020-10-15T02:43:07.8094150Z"
+            },
+            {
+                "id": "Occupancy-9",
+                "name": "Occupancy Sensor 9",
+                "position": {
+                    "x":  "0",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L00",
+                "dbId": 34919,
+                "lastActivityTime": "2020-10-15T02:43:07.8094150Z"
+            },
+            {
+                "id": "Occupancy-10",
+                "name": "Occupancy Sensor 10",
+                "position": {
+                    "x":  "0",
+                    "y": " -2.29658889770508",
+                    "z": " 0"
+                },
+                "floorId": "L00",
+                "dbId": 35276,
+                "lastActivityTime": "2020-10-15T02:43:07.8094150Z"
+            },
+            {
+                "id": "Occupancy-11",
+                "name": "Occupancy Sensor 11",
+                "position": {
+                    "x":  "0",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L00",
+                "dbId": 35286,
+                "lastActivityTime": "2020-10-15T02:43:07.8094150Z"
+            },
+            {
+                "id": "Occupancy-12",
+                "name": "Occupancy Sensor 12",
+                "position": {
+                    "x":  "0",
+                    "y": " -2.29658889770508",
+                    "z": " 0"
+                },
+                "floorId": "L00",
+                "dbId": 35291,
+                "lastActivityTime": "2020-10-15T02:43:07.8094150Z"
+            },
+            {
+                "id": "Occupancy-13",
+                "name": "Occupancy Sensor 13",
+                "position": {
+                    "x":  "0",
+                    "y": " -2.29658889770508",
+                    "z": " 0"
+                },
+                "floorId": "L00",
+                "dbId": 35296,
+                "lastActivityTime": "2020-10-15T02:43:07.8094150Z"
+            },
+            {
+                "id": "Occupancy-14",
+                "name": "Occupancy Sensor 14",
+                "position": {
+                    "x":  "0",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L00",
+                "dbId": 35534,
+                "lastActivityTime": "2020-10-15T02:43:07.8094150Z"
+            },
+            {
+                "id": "Occupancy-15",
+                "name": "Occupancy Sensor 15",
+                "position": {
+                    "x":  "0",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L00",
+                "dbId": 14282,
+                "lastActivityTime": "2020-10-15T02:43:07.8094150Z"
+            },
+            {
+                "id": "Occupancy-16",
+                "name": "Occupancy Sensor 16",
+                "position": {
+                    "x":  "2.29658889770508",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L00",
+                "dbId": 32899,
+                "lastActivityTime": "2020-10-15T02:43:07.8094150Z"
+            },
+            {
+                "id": "Occupancy-17",
+                "name": "Occupancy Sensor 17",
+                "position": {
+                    "x":  "2.29658889770508",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L00",
+                "dbId": 34787,
+                "lastActivityTime": "2020-10-15T02:43:07.8094150Z"
+            },
+            {
+                "id": "Occupancy-18",
+                "name": "Occupancy Sensor 18",
+                "position": {
+                    "x":  "2.29658889770508",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L00",
+                "dbId": 34978,
+                "lastActivityTime": "2020-10-15T02:43:07.8094150Z"
+            },
+            {
+                "id": "Occupancy-19",
+                "name": "Occupancy Sensor 19",
+                "position": {
+                    "x":  "0",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L00",
+                "dbId": 35016,
+                "lastActivityTime": "2020-10-15T02:43:07.8094150Z"
+            },
+            {
+                "id": "Occupancy-20",
+                "name": "Occupancy Sensor 20",
+                "position": {
+                    "x":  "2.29658889770508",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L00",
+                "dbId": 35054,
+                "lastActivityTime": "2020-10-15T02:43:07.8094150Z"
+            },
+            {
+                "id": "Occupancy-21",
+                "name": "Occupancy Sensor 21",
+                "position": {
+                    "x":  "0",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L00",
+                "dbId": 35092,
+                "lastActivityTime": "2020-10-15T02:43:07.8094150Z"
+            },
+            {
+                "id": "Occupancy-22",
+                "name": "Occupancy Sensor 22",
+                "position": {
+                    "x":  "-2.29658889770508",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L00",
+                "dbId": 35182,
+                "lastActivityTime": "2020-10-15T02:43:07.8094150Z"
+            },
+            {
+                "id": "Occupancy-23",
+                "name": "Occupancy Sensor 23",
+                "position": {
+                    "x":  "-2.29658889770508",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L00",
+                "dbId": 35220,
+                "lastActivityTime": "2020-10-15T02:43:07.8094150Z"
+            },
+            {
+                "id": "Occupancy-24",
+                "name": "Occupancy Sensor 24",
+                "position": {
+                    "x":  "-2.29658889770508",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L00",
+                "dbId": 35258,
+                "lastActivityTime": "2020-10-15T02:43:07.8094150Z"
+            },
+            {
+                "id": "Occupancy-25",
+                "name": "Occupancy Sensor 25",
+                "position": {
+                    "x":  "0",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L00",
+                "dbId": 42942,
+                "lastActivityTime": "2020-10-15T02:43:07.8094150Z"
+            },
+            {
+                "id": "Occupancy-26",
+                "name": "Occupancy Sensor 26",
+                "position": {
+                    "x":  "0",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L00",
+                "dbId": 42982,
+                "lastActivityTime": "2020-10-15T02:43:07.8094150Z"
+            },
+            {
+                "id": "Occupancy-27",
+                "name": "Occupancy Sensor 27",
+                "position": {
+                    "x":  "-2.29658889770508",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L00",
+                "dbId": 43107,
+                "lastActivityTime": "2020-10-15T02:43:07.8094150Z"
+            },
+            {
+                "id": "Occupancy-28",
+                "name": "Occupancy Sensor 28",
+                "position": {
+                    "x":  "0",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L00",
+                "dbId": 44568,
+                "lastActivityTime": "2020-10-15T02:43:07.8094150Z"
+            },
+            {
+                "id": "Occupancy-29",
+                "name": "Occupancy Sensor 29",
+                "position": {
+                    "x":  "0",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L00",
+                "dbId": 44606,
+                "lastActivityTime": "2020-10-15T02:43:07.8094150Z"
+            },
+            {
+                "id": "Occupancy-30",
+                "name": "Occupancy Sensor 30",
+                "position": {
+                    "x":  "0",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L00",
+                "dbId": 44644,
+                "lastActivityTime": "2020-10-15T02:43:07.8094150Z"
+            },
+            {
+                "id": "Occupancy-31",
+                "name": "Occupancy Sensor 31",
+                "position": {
+                    "x":  "-2.29658889770508",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L00",
+                "dbId": 44682,
+                "lastActivityTime": "2020-10-15T02:43:07.8094150Z"
+            },
+            {
+                "id": "Occupancy-32",
+                "name": "Occupancy Sensor 32",
+                "position": {
+                    "x":  "-2.29658889770508",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L00",
+                "dbId": 97435,
+                "lastActivityTime": "2020-10-15T02:43:07.8094150Z"
+            },
+            {
+                "id": "Occupancy-33",
+                "name": "Occupancy Sensor 33",
+                "position": {
+                    "x":  "0",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L00",
+                "dbId": 97477,
+                "lastActivityTime": "2020-10-15T02:43:07.8094150Z"
+            },
+            {
+                "id": "Occupancy-34",
+                "name": "Occupancy Sensor 34",
+                "position": {
+                    "x":  "0",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L00",
+                "dbId": 33899,
+                "lastActivityTime": "2020-10-15T02:43:07.8094150Z"
+            },
+            {
+                "id": "Occupancy-35",
+                "name": "Occupancy Sensor 35",
+                "position": {
+                    "x":  "0",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L00",
+                "dbId": 33907,
+                "lastActivityTime": "2020-10-15T02:43:07.8094150Z"
+            },
+            {
+                "id": "Occupancy-36",
+                "name": "Occupancy Sensor 36",
+                "position": {
+                    "x":  "0",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L00",
+                "dbId": 33912,
+                "lastActivityTime": "2020-10-15T02:43:07.8094150Z"
+            },
+            {
+                "id": "Occupancy-37",
+                "name": "Occupancy Sensor 37",
+                "position": {
+                    "x":  "0",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L00",
+                "dbId": 33917,
+                "lastActivityTime": "2020-10-15T02:43:07.8094150Z"
+            },
+            {
+                "id": "Occupancy-38",
+                "name": "Occupancy Sensor 38",
+                "position": {
+                    "x":  "-2.29658889770508",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L00",
+                "dbId": 33922,
+                "lastActivityTime": "2020-10-15T02:43:07.8094150Z"
+            },
+            {
+                "id": "Occupancy-39",
+                "name": "Occupancy Sensor 39",
+                "position": {
+                    "x":  "-2.29658889770508",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L00",
+                "dbId": 33927,
+                "lastActivityTime": "2020-10-15T02:43:07.8094150Z"
+            },
+            {
+                "id": "Occupancy-40",
+                "name": "Occupancy Sensor 40",
+                "position": {
+                    "x":  "-2.29658889770508",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L00",
+                "dbId": 33932,
+                "lastActivityTime": "2020-10-15T02:43:07.8094150Z"
+            },
+            {
+                "id": "Occupancy-41",
+                "name": "Occupancy Sensor 41",
+                "position": {
+                    "x":  "0",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L00",
+                "dbId": 33937,
+                "lastActivityTime": "2020-10-15T02:43:07.8094150Z"
+            },
+            {
+                "id": "Occupancy-42",
+                "name": "Occupancy Sensor 42",
+                "position": {
+                    "x":  "0",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L00",
+                "dbId": 33942,
+                "lastActivityTime": "2020-10-15T02:43:07.8094150Z"
+            },
+            {
+                "id": "Occupancy-43",
+                "name": "Occupancy Sensor 43",
+                "position": {
+                    "x":  "0",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L00",
+                "dbId": 33947,
+                "lastActivityTime": "2020-10-15T02:43:07.8094150Z"
+            },
+            {
+                "id": "Occupancy-44",
+                "name": "Occupancy Sensor 44",
+                "position": {
+                    "x":  "0",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L00",
+                "dbId": 33952,
+                "lastActivityTime": "2020-10-15T02:43:07.8094150Z"
+            },
+            {
+                "id": "Occupancy-45",
+                "name": "Occupancy Sensor 45",
+                "position": {
+                    "x":  "0",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L00",
+                "dbId": 33957,
+                "lastActivityTime": "2020-10-15T02:43:07.8094150Z"
+            },
+            {
+                "id": "Occupancy-46",
+                "name": "Occupancy Sensor 46",
+                "position": {
+                    "x":  "-2.29658889770508",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L00",
+                "dbId": 33962,
+                "lastActivityTime": "2020-10-15T02:43:07.8094150Z"
+            },
+            {
+                "id": "Occupancy-47",
+                "name": "Occupancy Sensor 47",
+                "position": {
+                    "x":  "-2.29658889770508",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L00",
+                "dbId": 33967,
+                "lastActivityTime": "2020-10-15T02:43:07.8094150Z"
+            },
+            {
+                "id": "Occupancy-48",
+                "name": "Occupancy Sensor 48",
+                "position": {
+                    "x":  "0",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L00",
+                "dbId": 34021,
+                "lastActivityTime": "2020-10-15T02:43:07.8094150Z"
+            },
+            {
+                "id": "Occupancy-49",
+                "name": "Occupancy Sensor 49",
+                "position": {
+                    "x":  "0",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L00",
+                "dbId": 35139,
+                "lastActivityTime": "2020-10-15T02:43:07.8094150Z"
+            },
+            {
+                "id": "Occupancy-50",
+                "name": "Occupancy Sensor 50",
+                "position": {
+                    "x":  "0",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L00",
+                "dbId": 112980,
+                "lastActivityTime": "2020-10-15T02:43:07.8094150Z"
+            }
+        ]
+    },
+    {
+        "deviceModelId": "d370a293-4bd5-4bdb-a3df-376dc131d44c",
+        "deviceInfo": [
+            {
+                "id": "Room-1",
+                "name": "Room Sensor 1",
+                "position": {
+                    "x":  "2",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L00",
+                "dbId": 4558,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Room-2",
+                "name": "Room Sensor 2",
+                "position": {
+                    "x":  "2",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L00",
+                "dbId": 4564,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Room-3",
+                "name": "Room Sensor 3",
+                "position": {
+                    "x":  "2",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L00",
+                "dbId": 4566,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Room-4",
+                "name": "Room Sensor 4",
+                "position": {
+                    "x":  "2",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L00",
+                "dbId": 4568,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Room-5",
+                "name": "Room Sensor 5",
+                "position": {
+                    "x":  "2",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L00",
+                "dbId": 4570,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Room-6",
+                "name": "Room Sensor 6",
+                "position": {
+                    "x":  "2",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L00",
+                "dbId": 4572,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Room-7",
+                "name": "Room Sensor 7",
+                "position": {
+                    "x":  "2",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L00",
+                "dbId": 4574,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Room-8",
+                "name": "Room Sensor 8",
+                "position": {
+                    "x":  "2",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L00",
+                "dbId": 4576,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Room-9",
+                "name": "Room Sensor 9",
+                "position": {
+                    "x":  "2",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L00",
+                "dbId": 4578,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Room-10",
+                "name": "Room Sensor 10",
+                "position": {
+                    "x":  "2",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L00",
+                "dbId": 4580,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Room-11",
+                "name": "Room Sensor 11",
+                "position": {
+                    "x":  "2",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L00",
+                "dbId": 4582,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Room-12",
+                "name": "Room Sensor 12",
+                "position": {
+                    "x":  "2",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L00",
+                "dbId": 4584,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Room-13",
+                "name": "Room Sensor 13",
+                "position": {
+                    "x":  "2",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L00",
+                "dbId": 4586,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Room-14",
+                "name": "Room Sensor 14",
+                "position": {
+                    "x":  "2",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L00",
+                "dbId": 4588,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Room-15",
+                "name": "Room Sensor 15",
+                "position": {
+                    "x":  "2",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L00",
+                "dbId": 4590,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Room-16",
+                "name": "Room Sensor 16",
+                "position": {
+                    "x":  "2",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L00",
+                "dbId": 4592,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Room-17",
+                "name": "Room Sensor 17",
+                "position": {
+                    "x":  "2",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L00",
+                "dbId": 4594,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Room-18",
+                "name": "Room Sensor 18",
+                "position": {
+                    "x":  "2",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L00",
+                "dbId": 4595,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Room-19",
+                "name": "Room Sensor 19",
+                "position": {
+                    "x":  "2",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L00",
+                "dbId": 4597,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Room-20",
+                "name": "Room Sensor 20",
+                "position": {
+                    "x":  "2",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L00",
+                "dbId": 4599,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Room-21",
+                "name": "Room Sensor 21",
+                "position": {
+                    "x":  "2",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L00",
+                "dbId": 4601,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Room-22",
+                "name": "Room Sensor 22",
+                "position": {
+                    "x":  "2",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L00",
+                "dbId": 4603,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Room-23",
+                "name": "Room Sensor 23",
+                "position": {
+                    "x":  "2",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L00",
+                "dbId": 4605,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Room-24",
+                "name": "Room Sensor 24",
+                "position": {
+                    "x":  "2",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L00",
+                "dbId": 4607,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Room-25",
+                "name": "Room Sensor 25",
+                "position": {
+                    "x":  "2",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L00",
+                "dbId": 4609,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Room-26",
+                "name": "Room Sensor 26",
+                "position": {
+                    "x":  "2",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L00",
+                "dbId": 4611,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Room-27",
+                "name": "Room Sensor 27",
+                "position": {
+                    "x":  "2",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L00",
+                "dbId": 4613,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Room-28",
+                "name": "Room Sensor 28",
+                "position": {
+                    "x":  "2",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L00",
+                "dbId": 4615,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Room-29",
+                "name": "Room Sensor 29",
+                "position": {
+                    "x":  "2",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L00",
+                "dbId": 4617,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Room-30",
+                "name": "Room Sensor 30",
+                "position": {
+                    "x":  "2",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L00",
+                "dbId": 4619,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Room-31",
+                "name": "Room Sensor 31",
+                "position": {
+                    "x":  "2",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L00",
+                "dbId": 4621,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Room-32",
+                "name": "Room Sensor 32",
+                "position": {
+                    "x":  "2",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L00",
+                "dbId": 4623,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Room-33",
+                "name": "Room Sensor 33",
+                "position": {
+                    "x":  "2",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L00",
+                "dbId": 4625,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Room-34",
+                "name": "Room Sensor 34",
+                "position": {
+                    "x":  "2",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L00",
+                "dbId": 4627,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Room-35",
+                "name": "Room Sensor 35",
+                "position": {
+                    "x":  "2",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L00",
+                "dbId": 4629,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Room-36",
+                "name": "Room Sensor 36",
+                "position": {
+                    "x":  "2",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L00",
+                "dbId": 4633,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Room-37",
+                "name": "Room Sensor 37",
+                "position": {
+                    "x":  "2",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L00",
+                "dbId": 4635,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Room-38",
+                "name": "Room Sensor 38",
+                "position": {
+                    "x":  "2",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L00",
+                "dbId": 4637,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Room-39",
+                "name": "Room Sensor 39",
+                "position": {
+                    "x":  "2",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L00",
+                "dbId": 4639,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Room-40",
+                "name": "Room Sensor 40",
+                "position": {
+                    "x":  "2",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L00",
+                "dbId": 4641,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Room-41",
+                "name": "Room Sensor 41",
+                "position": {
+                    "x":  "2",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L00",
+                "dbId": 4642,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Room-42",
+                "name": "Room Sensor 42",
+                "position": {
+                    "x":  "2",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L00",
+                "dbId": 4647,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Room-43",
+                "name": "Room Sensor 43",
+                "position": {
+                    "x":  "2",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L00",
+                "dbId": 4649,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Room-44",
+                "name": "Room Sensor 44",
+                "position": {
+                    "x":  "2",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L00",
+                "dbId": 4769,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Room-45",
+                "name": "Room Sensor 45",
+                "position": {
+                    "x":  "2",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L00",
+                "dbId": 4775,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Room-46",
+                "name": "Room Sensor 46",
+                "position": {
+                    "x":  "2",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L00",
+                "dbId": 4809,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Room-47",
+                "name": "Room Sensor 47",
+                "position": {
+                    "x":  "2",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L00",
+                "dbId": 4818,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Room-48",
+                "name": "Room Sensor 48",
+                "position": {
+                    "x":  "2",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L00",
+                "dbId": 4925,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Room-49",
+                "name": "Room Sensor 49",
+                "position": {
+                    "x":  "2",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L00",
+                "dbId": 4927,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Room-50",
+                "name": "Room Sensor 50",
+                "position": {
+                    "x":  "2",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L00",
+                "dbId": 4929,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Room-51",
+                "name": "Room Sensor 51",
+                "position": {
+                    "x":  "2",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L00",
+                "dbId": 4931,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Room-52",
+                "name": "Room Sensor 52",
+                "position": {
+                    "x":  "2",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L00",
+                "dbId": 4933,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Room-53",
+                "name": "Room Sensor 53",
+                "position": {
+                    "x":  "2",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L00",
+                "dbId": 4937,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Room-54",
+                "name": "Room Sensor 54",
+                "position": {
+                    "x":  "2",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L00",
+                "dbId": 4939,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Room-55",
+                "name": "Room Sensor 55",
+                "position": {
+                    "x":  "2",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L00",
+                "dbId": 4947,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Room-56",
+                "name": "Room Sensor 56",
+                "position": {
+                    "x":  "2",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L00",
+                "dbId": 4996,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Room-57",
+                "name": "Room Sensor 57",
+                "position": {
+                    "x":  "2",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L00",
+                "dbId": 4998,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Room-58",
+                "name": "Room Sensor 58",
+                "position": {
+                    "x":  "2",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L00",
+                "dbId": 5001,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Room-59",
+                "name": "Room Sensor 59",
+                "position": {
+                    "x":  "2",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L00",
+                "dbId": 5003,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Room-60",
+                "name": "Room Sensor 60",
+                "position": {
+                    "x":  "2",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L00",
+                "dbId": 5005,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Room-61",
+                "name": "Room Sensor 61",
+                "position": {
+                    "x":  "2",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L00",
+                "dbId": 5009,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Room-62",
+                "name": "Room Sensor 62",
+                "position": {
+                    "x":  "2",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L00",
+                "dbId": 5011,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Room-63",
+                "name": "Room Sensor 63",
+                "position": {
+                    "x":  "2",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L00",
+                "dbId": 5029,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Room-64",
+                "name": "Room Sensor 64",
+                "position": {
+                    "x":  "2",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L00",
+                "dbId": 5082,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Room-65",
+                "name": "Room Sensor 65",
+                "position": {
+                    "x":  "2",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L00",
+                "dbId": 6273,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Room-66",
+                "name": "Room Sensor 66",
+                "position": {
+                    "x":  "2",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L00",
+                "dbId": 6275,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Room-67",
+                "name": "Room Sensor 67",
+                "position": {
+                    "x":  "2",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L00",
+                "dbId": 6284,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Room-68",
+                "name": "Room Sensor 68",
+                "position": {
+                    "x":  "2",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L00",
+                "dbId": 6286,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Room-69",
+                "name": "Room Sensor 69",
+                "position": {
+                    "x":  "2",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L00",
+                "dbId": 6294,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Room-70",
+                "name": "Room Sensor 70",
+                "position": {
+                    "x":  "2",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L00",
+                "dbId": 6296,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Room-71",
+                "name": "Room Sensor 71",
+                "position": {
+                    "x":  "2",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L00",
+                "dbId": 6323,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Room-72",
+                "name": "Room Sensor 72",
+                "position": {
+                    "x":  "2",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L00",
+                "dbId": 17399,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Room-73",
+                "name": "Room Sensor 73",
+                "position": {
+                    "x":  "2",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L00",
+                "dbId": 18523,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Room-74",
+                "name": "Room Sensor 74",
+                "position": {
+                    "x":  "2",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L00",
+                "dbId": 28972,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Room-75",
+                "name": "Room Sensor 75",
+                "position": {
+                    "x":  "2",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L00",
+                "dbId": 28977,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Room-76",
+                "name": "Room Sensor 76",
+                "position": {
+                    "x":  "2",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L00",
+                "dbId": 28982,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Room-77",
+                "name": "Room Sensor 77",
+                "position": {
+                    "x":  "2",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L00",
+                "dbId": 29875,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Room-78",
+                "name": "Room Sensor 78",
+                "position": {
+                    "x":  "2",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L00",
+                "dbId": 29888,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Room-79",
+                "name": "Room Sensor 79",
+                "position": {
+                    "x":  "2",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L00",
+                "dbId": 46414,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Room-80",
+                "name": "Room Sensor 80",
+                "position": {
+                    "x":  "2",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L00",
+                "dbId": 46458,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Room-81",
+                "name": "Room Sensor 81",
+                "position": {
+                    "x":  "2",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L00",
+                "dbId": 46459,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Room-82",
+                "name": "Room Sensor 82",
+                "position": {
+                    "x":  "2",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L00",
+                "dbId": 57293,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Room-83",
+                "name": "Room Sensor 83",
+                "position": {
+                    "x":  "2",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L00",
+                "dbId": 97501,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            }
+        ]
+    },
+    {
+        "deviceModelId": "Energy-Usage-Sensor",
+        "deviceInfo": [
+            {
+                "id": "Energy-1",
+                "name": "Energy Sensor 1",
+                "position": {
+                    "x":  "0",
+                    "y": " -2.29658889770508",
+                    "z": " 0"
+                },
+                "floorId": "L00",
+                "dbId": 4617,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Energy-2",
+                "name": "Energy Sensor 2",
+                "position": {
+                    "x":  "0",
+                    "y": " -2.29658889770508",
+                    "z": " 0"
+                },
+                "floorId": "L00",
+                "dbId": 4619,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Energy-3",
+                "name": "Energy Sensor 3",
+                "position": {
+                    "x":  "0",
+                    "y": " -2.29658889770508",
+                    "z": " 0"
+                },
+                "floorId": "L00",
+                "dbId": 4621,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Energy-4",
+                "name": "Energy Sensor 4",
+                "position": {
+                    "x":  "0",
+                    "y": " -2.29658889770508",
+                    "z": " 0"
+                },
+                "floorId": "L00",
+                "dbId": 4623,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Energy-5",
+                "name": "Energy Sensor 5",
+                "position": {
+                    "x":  "0",
+                    "y": " -2.29658889770508",
+                    "z": " 0"
+                },
+                "floorId": "L00",
+                "dbId": 4625,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            }
+
+        ]
+    },
+    {
+        "deviceModelId": "GeneralRoomSensor",
+        "deviceInfo": []
+    }
+]
