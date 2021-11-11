@@ -504,72 +504,8 @@ export default function NewBaseApp(props) {
 
         //Function which takes in the numeric code on the end of a models name in the viewer
         //and write that models dbId in the console           
-        let suffixesToSearch = [
-            2376247,
-2376253,
-2376281,
-2376287,
-2376313,
-2376319,
-2376325,
-2376331,
-2376337,
-2376343,
-2376418,
-2376424,
-2376430,
-2376436,
-2376454,
-2376460,
-2376466,
-2376472,
-2376495,
-2376501,
-2376507,
-2376513,
-2376519,
-2376525,
-2376531,
-2376537,
-2376543,
-2376549,
-2376555,
-2376561,
-2376583,
-2376589,
-2376595,
-2376601,
-2376607,
-2376613,
-2376638,
-2376644,
-2376650,
-2376656,
-2376662,
-2376668,
-2376674,
-2376680,
-2376686,
-2376692,
-2376698,
-2376704,
-2376836,
-2376842,
-2376848,
-2376854,
-2376860,
-2376866,
-2376872,
-2376878,
-2376884,
-2376890,
-2376896,
-2376902,
-2377054,
-2377060
-
-        ];
-        printdbIds( suffixesToSearch, model);
+        //let suffixesToSearch = [];
+        //printdbIds( suffixesToSearch, model);
 
         let styleMap = initialDeviceModelStyleMap(props.surfaceShadingConfig);
         let { shadingData, devicePanelData } = props.data;
@@ -636,6 +572,7 @@ export default function NewBaseApp(props) {
 
         setupRoomSensors();
 
+        /**
 
         function addRoomOccupancy(deviceModel, shadingData) {
 
@@ -650,6 +587,8 @@ export default function NewBaseApp(props) {
     
             return shadingData
         }
+
+        */
 
 
         session.dataStore.deviceModels.forEach((deviceModel) => {
@@ -714,6 +653,8 @@ export default function NewBaseApp(props) {
 
         });
 
+
+        /**
         session.dataStore.deviceModels.forEach((deviceModel) => {
             let isOccupancySensor = false;
 
@@ -729,6 +670,8 @@ export default function NewBaseApp(props) {
 
         });
         
+        */
+
         shadingData.initialize(model);
 
 
