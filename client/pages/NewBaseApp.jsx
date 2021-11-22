@@ -124,23 +124,11 @@ const startDate = new Date(currDate.getTime() - 14 * 24 * 60 * 60 * 1000);
 startDate.setUTCHours(0, 0, 0, 0);
 
 //Array which holds all the data for the "Occupied Average" data type
-let averageOccupancy = [{
-    deviceId: null,
-    data: null
-}]; 
-
+let averageOccupancy = {}; 
 //Array which holds all the data for energy consumption over time
-let energyConsumption = {
-    time: {
-        start: null,
-        end: null,
-        span: null
-    },
-    data: [{
-        deviceId: null,
-        data: null,
-    }],
-};
+let energyConsumption = {};
+let roomEnergyConsumption = {};
+let roomOccupancy = {};
 
 let currentViewables = [];
 
@@ -214,6 +202,7 @@ export default function NewBaseApp(props) {
     if (props.appData.dataStart && props.appData.dataEnd) {
         let dataStart = new Date(props.appData.dataStart);
         let dataEnd = new Date(props.appData.dataEnd);
+
         startRange.setTime(dataStart.getTime());
         endRange.setTime(dataEnd.getTime());
 
@@ -262,12 +251,12 @@ export default function NewBaseApp(props) {
                 occlusion: false,
                 showTextures: true,
                 heatmapType: "GeometryHeatmap",
-                showSensors: {
-                    generalRoomSensors: true,
-                    hybridSensors: false,
-                    occupancySensors: false,
-                    energySensors: false
-                }
+                
+                generalRoomSensors: true,
+                hybridSensors: false,
+                occupancySensors: false,
+                energySensors: false
+                
             },
             props.renderSettings
         )
@@ -290,6 +279,7 @@ export default function NewBaseApp(props) {
     const [dataContext, setDataContext] = useState("");
     const currentDeviceDataRef = useRef({});
     const chartDataRef = useRef({});
+    
 
     timeOptionRef.current = timeOptions;
     appStateRef.current = appState;
@@ -426,10 +416,10 @@ export default function NewBaseApp(props) {
                 let { occlusion, showViewables, showTextures } = newSettings;
                 setRenderSettings(newSettings);
 
-                currentViewables[0].nextState = newSettings.showSensors.occupancySensors;
-                currentViewables[1].nextState = newSettings.showSensors.hybridSensors;
-                currentViewables[2].nextState = newSettings.showSensors.energySensors;
-                currentViewables[3].nextState = newSettings.showSensors.generalRoomSensors;
+                currentViewables[0].nextState = newSettings.occupancySensors;
+                currentViewables[1].nextState = newSettings.hybridSensors;
+                currentViewables[2].nextState = newSettings.energySensors;
+                currentViewables[3].nextState = newSettings.generalRoomSensors;
 
                 dataVizExtn.showHideViewables(showViewables, occlusion);
                 if (showTextures) {
@@ -439,6 +429,26 @@ export default function NewBaseApp(props) {
                 }
             }
         });
+
+        props.eventBus.addEventListener(EventTypes.TIME_SETTINGS_CHANGED, async (event) => {
+            if(!event.hasStopped) {
+
+                let newStartTime = new Date(startTime.value);
+                let newEndTime = new Date(endTime.value);
+                let newCurrentTime = new Date(currentTime.value);
+
+                if (newCurrentTime < newStartTime) {
+                    newCurrentTime = newStartTime;
+                }
+
+                if (newCurrentTime > newEndTime) {
+                    newCurrentTime = newEndTime;
+                }
+
+                handleTimeRangeUpdated(newStartTime, newEndTime, newCurrentTime);
+
+            }
+        })
 
         dispatchEventToHandler({
             type: EventTypes.MODEL_LOAD_COMPLETED,
@@ -572,25 +582,6 @@ export default function NewBaseApp(props) {
 
         setupRoomSensors();
 
-        /**
-
-        function addRoomOccupancy(deviceModel, shadingData) {
-
-            shadingData.forEach((floor) => {
-                floor._children.forEach((room) => {
-                    room.fragIds.forEach((fragId) => {
-                        
-
-                    });
-                });
-            });
-    
-            return shadingData
-        }
-
-        */
-
-
         session.dataStore.deviceModels.forEach((deviceModel) => {
 
             deviceModelNames.push(deviceModel.name);
@@ -604,13 +595,14 @@ export default function NewBaseApp(props) {
                     const newShadingNode = new Autodesk.DataVisualization.Core.SurfaceShadingNode(device.name, device.dbId);
                     const newShadingPoint = new Autodesk.DataVisualization.Core.SurfaceShadingPoint(device.id, undefined, device.propIds);
 
-                    newShadingPoint.position = getModelCentre(device.dbId, model.getFragmentList());
+                    newShadingPoint.position = getModelCentre(device.dbId, appState.model.getFragmentList());
                     newShadingPoint.position.x += device.position.x;
                     newShadingPoint.position.y += device.position.y;
                     newShadingPoint.position.z += device.position.z;
 
                     newShadingPoint.dbId = device.dbId;
                     newShadingPoint.types = deviceModel.propertyIds;
+                    newShadingPoint.contextData.styleId = deviceModel.id;
                     
                     device.position = newShadingPoint.position;
 
@@ -641,7 +633,7 @@ export default function NewBaseApp(props) {
                                 id: device.id,
                                 name: device.name,
                                 propIds: device.sensorTypes,
-                                children: []
+                                children: [],
                             };
                             props.data.devicePanelData[i].children.push(deviceData);
 
@@ -652,25 +644,6 @@ export default function NewBaseApp(props) {
             });
 
         });
-
-
-        /**
-        session.dataStore.deviceModels.forEach((deviceModel) => {
-            let isOccupancySensor = false;
-
-            deviceModel.propertyIds.forEach((property) => {
-                if (property == "Occupied") {
-                    isOccupancySensor = true;
-                }
-            });
-
-            if (isOccupancySensor) {
-                shadingData._children = addRoomOccupancy(deviceModel, shadingData.children);
-            }
-
-        });
-        
-        */
 
         shadingData.initialize(model);
 
@@ -1082,14 +1055,31 @@ export default function NewBaseApp(props) {
             options.endTime = endTime;
             options.currentTime = currentTime ? currentTime : startTime;
 
+            
+            let averageOccupancyList = [];
+            let energyConsumptionList = [];
+
+
             currAppState.session.dataStore.deviceModels.forEach((deviceModel) => {
                 
                 deviceModel.propertyIds.forEach((property) => {
-                    if (property == "Occupancy Percentage") {
+                    if (property == "OccupancyPercentage") {
                         setAverageOccupancy(deviceModel, getTimeInEpochSeconds(startTime) * 1000, getTimeInEpochSeconds(endTime) * 1000);
+
+                        averageOccupancyList.push(deviceModel);
+
                     }
-                    else if (property == "Total Energy Consumption") {
+                    else if (property == "Asset Energy Consumption") {
                         setEnergyConsumption(deviceModel, getTimeInEpochSeconds(startTime) * 1000, getTimeInEpochSeconds(endTime) * 1000);
+                        
+                        energyConsumptionList.push(deviceModel);
+
+                    }
+                    else if (property == "Room Occupancy") {
+                        setRoomOccupancy(deviceModel, getTimeInEpochSeconds(startTime) * 1000, getTimeInEpochSeconds(endTime) * 1000, averageOccupancyList, currAppState.shadingData);
+                    }
+                    else if (property == "Room Energy Usage") {
+                        setRoomEnergyConsumption(deviceModel, getTimeInEpochSeconds(startTime) * 1000, getTimeInEpochSeconds(endTime) * 1000, energyConsumptionList, currAppState.shadingData);
                     }
                 });
                 
@@ -1147,8 +1137,6 @@ export default function NewBaseApp(props) {
 
     function setAverageOccupancy(deviceModel, startTime, endTime) {
 
-        averageOccupancy.length = 0;
-
         let averageOccupancyPercentage = 0;
         let dataOverTime = [];
         Object.assign(dataOverTime, chartDataRef.current);
@@ -1162,7 +1150,10 @@ export default function NewBaseApp(props) {
                 dataOverTime[device.id].properties.Occupied.seriesData.forEach((dataEntry) => {
 
                     if (dataEntry.value[0] >= startTime && dataEntry.value[0] <= endTime) {
-                        dataTotal += dataEntry.value[1];
+                        if (dataEntry.value[1]) {
+                            dataTotal += dataEntry.value[1];
+                        
+                        }
                         index++;
                     }
     
@@ -1170,12 +1161,8 @@ export default function NewBaseApp(props) {
     
                 averageOccupancyPercentage = ((dataTotal/index)*100).toFixed(2);
 
-                let newData = {
-                    deviceId: device.id,
-                    data: averageOccupancyPercentage
-                }
+                averageOccupancy[device.id] = averageOccupancyPercentage;
 
-                averageOccupancy.push(newData);
 
             }
         });
@@ -1184,14 +1171,6 @@ export default function NewBaseApp(props) {
     function setEnergyConsumption(deviceModel, startTime, endTime) {
         const epochTimeSpan = endTime - startTime;
         const hours = epochTimeSpan / 3600000; //divide by 3600 (converts eposh seconds to hours) x 1000 (modifier applied to start and end times before triggering function)
-
-        energyConsumption.time = {
-            start: startTime,
-            end: endTime,
-            span: epochTimeSpan
-        };
-
-        energyConsumption.data.length = 0;
 
         let dataOverTime = [];
         Object.assign(dataOverTime, chartDataRef.current);
@@ -1215,14 +1194,144 @@ export default function NewBaseApp(props) {
                 let averageDataTotal = dataTotal/index;
                 let kWh = averageDataTotal * hours;
 
-                let newkWhData = {
-                    deviceId: device.id,
-                    data: kWh
-                };
-
-                energyConsumption.data.push(newkWhData)
+                energyConsumption[device.id] = kWh;
             }
         })
+    }
+
+    function setRoomOccupancy(deviceModel, startTime, endTime, relevantDeviceList, shadingData) {
+        const epochTimeSpan = endTime - startTime;
+        const hours = epochTimeSpan / 3600000; //divide by 3600 (converts eposh seconds to hours) x 1000 (modifier applied to start and end times before triggering function)
+        
+        let dataOverTime = [];
+        Object.assign(dataOverTime, chartDataRef.current);
+
+        let roomBounds = new THREE.Box3();
+        
+        deviceModel.devices.forEach((device) => {
+
+            let dbId = device.dbId;
+
+            shadingData._children.forEach((floor) => {
+                floor._children.forEach((room) => {
+                    room.dbIds.forEach((roomDbId) => {
+
+                        if (roomDbId == dbId) {
+                            roomBounds = room.bounds;
+                        }
+
+                    });
+                });
+            });
+
+            let totalOccupancy = 0;
+
+            let sensorsInBounds = [];
+
+            relevantDeviceList.forEach((relevantModel) => {
+                relevantModel.devices.forEach((occupancyDevice) => {
+                    let position = occupancyDevice.position;
+                    
+                    if (position.x >= roomBounds.min.x && position.x <= roomBounds.max.x &&
+                        position.y >= roomBounds.min.y && position.y <= roomBounds.max.y &&
+                        position.z >= roomBounds.min.z && position.z <= roomBounds.max.z) {
+                            
+                            sensorsInBounds.push(occupancyDevice);
+                            
+                        }
+                        
+                    
+                });
+            });
+
+            if (sensorsInBounds.length > 0) {
+
+                const dataView = appStateRef.current.masterDataView;
+
+                if (chartDataRef.current[sensorsInBounds[0].id]) {
+
+
+                    let roomOccupancyData = dataOverTime[sensorsInBounds[0].id].properties.Occupied.seriesData;
+
+                    roomOccupancyData.forEach((data) => {
+
+                        let dataTotal = 0;
+
+                        sensorsInBounds.forEach((sensor) => {
+                            
+                            let dataCounter = 0;
+
+                            for (let i = 0; i < roomOccupancyData.length; i++) {
+
+                            }
+                            
+                            //dataTotal += value;
+                            
+
+                        });
+
+                        data.value[1] = dataTotal/sensorsInBounds.length;
+
+                        
+                    });
+
+                }
+
+            }
+
+
+        });
+    }
+
+    function setRoomEnergyConsumption(deviceModel, startTime, endTime, relevantDeviceList, shadingData) {
+        const epochTimeSpan = endTime - startTime;
+        const hours = epochTimeSpan / 3600000; //divide by 3600 (converts eposh seconds to hours) x 1000 (modifier applied to start and end times before triggering function)
+       
+        let dataOverTime = [];
+        Object.assign(dataOverTime, chartDataRef.current);
+
+
+        let roomBounds = new THREE.Box3();
+       
+        deviceModel.devices.forEach((device) => {
+
+            let dbId = device.dbId;
+
+            shadingData._children.forEach((floor) => {
+                floor._children.forEach((room) => {
+                    room.dbIds.forEach((roomDbId) => {
+
+                        if (roomDbId == dbId) {
+                            roomBounds = room.bounds;
+                        }
+
+                    });
+                });
+            });
+
+            let dataTotal = 0;
+
+            relevantDeviceList.forEach((relevantModel) => {
+                relevantModel.devices.forEach((energyDevice) => {
+                    let position = energyDevice.position;
+                    
+                    if (position.x >= roomBounds.min.x && position.x <= roomBounds.max.x &&
+                        position.y >= roomBounds.min.y && position.y <= roomBounds.max.y &&
+                        position.z >= roomBounds.min.z && position.z <= roomBounds.max.z) {
+                            
+                            if (energyConsumption[energyDevice.id]) {
+                                dataTotal += energyConsumption[energyDevice.id];
+                            }
+                            
+                        }
+                        
+                    
+                });
+            });
+
+            roomEnergyConsumption[device.id] = dataTotal;
+
+        });
     }
 
     /**
@@ -1259,7 +1368,8 @@ export default function NewBaseApp(props) {
                 const ct = getTimeInEpochSeconds(options.currentTime);
                 const av = dataView.getAggregatedValues(deviceId, prop.id);
 
-                if (av && sensorType != "Occupancy Percentage" && sensorType != "Total Energy Consumption") {
+                if (av && sensorType != "OccupancyPercentage" && sensorType != "Asset Energy Consumption" 
+                       && sensorType != "Room Occupancy"     && sensorType != "Room Energy Usage") {
 
                 
 
@@ -1276,45 +1386,68 @@ export default function NewBaseApp(props) {
                 
                 
                 
-            }
-            else {
-                if (sensorType == "Occupancy Percentage") {
+            } else {
+                if (sensorType == "OccupancyPercentage") {
                     let avgOccupancy = 0;
 
-                    if (averageOccupancy.length > 0) {
-                        averageOccupancy.forEach((device) => {
-                            if (device.deviceId == deviceId)
-                            {
-                                avgOccupancy = device.data;
-                            }
-                        });
-
-                        let normalizedData = 0;
-                        normalizedData = avgOccupancy / 100;
-                    
-                        avgOccupancy = clamp(normalizedData, 0, 1);
-
+                    if (averageOccupancy[deviceId]) {
+                        avgOccupancy = averageOccupancy[deviceId];
+                    } else {
+                        avgOccupancy = 0;
                     }
+                    
+
+                    let normalizedData = 0;
+                    normalizedData = avgOccupancy / 100;
+                    
+                    avgOccupancy = clamp(normalizedData, 0, 1);
 
                     return avgOccupancy;
-                }
-                else 
-                if (sensorType == "Total Energy Consumption") {
+                } else if (sensorType == "Asset Energy Consumption") {
                     let data = 0;
-                    
-                    if (energyConsumption.data.length > 0) {
-                        energyConsumption.data.forEach((device) => {
-                            if (device.deviceId == deviceId)
-                            {
-                                data = device.data;    
-                            }
-                        });
 
-                        let normalizedData = 0;
-                        normalizedData = data / 250000;
-                    
-                        data = clamp(normalizedData, 0, 1);
+                    if(energyConsumption[deviceId]) {
+                        data = energyConsumption[deviceId];
+                    } else {
+                        data = 0;
                     }
+
+                    let normalizedData = 0;
+                    normalizedData = data/250000;
+
+                    data = clamp(normalizedData, 0, 1);
+
+                    return data;
+                } else if (sensorType == "Room Occupancy") {
+                    let data = 0;
+
+                    if (roomOccupancy[deviceId]) {
+                        data = roomOccupancy[deviceId].data;
+                    } else {
+                        data = 0;
+                    }
+
+                    let normalizedData = 0;
+                    normalizedData = data / 100;
+
+                    data = clamp(normalizedData, 0, 1);
+
+                    return data;
+
+                }else if (sensorType == "Room Energy Usage") {
+                    let data = 0;
+
+                    if(roomEnergyConsumption[deviceId]) {
+                        data = roomEnergyConsumption[deviceId];
+                    } else {
+                        data = 0;
+                    }
+
+                    let normalizedData = 0;
+                    normalizedData = data / 250000;
+
+                    data = clamp(normalizedData, 0, 1);
+
 
                     return data;
                 }
@@ -1586,12 +1719,44 @@ export default function NewBaseApp(props) {
                     }
 
                     const seriesData = [];
-                    av.tsValues.forEach((tsValue, index) => {
-                        seriesData.push({
-                            value: [tsValue * 1000, av.avgValues[index]],
-                            label: {},
+
+                    if (property != "OccupancyPercentage" && property != "Asset Energy Consumption"
+                     && property != "Room Energy Usage") {
+                        av.tsValues.forEach((tsValue, index) => {
+                            seriesData.push({
+                                value: [tsValue * 1000, av.avgValues[index]],
+                                label: {},
+                            });
                         });
-                    });
+                    }
+                    else {
+                        if (property == "OccupancyPercentage") {
+                            av.tsValues.forEach((tsValue, index) => {
+                                seriesData.push({
+                                    value: [tsValue * 1000, averageOccupancy[device.id]],
+                                    label: {},
+                                });
+                            });
+                        }
+                        else if (property == "Asset Energy Consumption") {
+                            av.tsValues.forEach((tsValue, index) => {
+                                seriesData.push({
+                                    value: [tsValue * 1000, energyConsumption[device.id]],
+                                    label: {},
+                                });
+                            });
+                        }
+                        else if (property == "Room Energy Usage") {
+                            av.tsValues.forEach((tsValue, index) => {
+                                seriesData.push({
+                                    value: [tsValue * 1000, roomEnergyConsumption[device.id]],
+                                    label: {},
+                                });
+                            });
+                        }
+                       
+                    }
+                    
                     let deviceProperty = propertyMap.get(property);
                     let dataUnit = deviceProperty ? deviceProperty.dataUnit : "%";
                     data[device.id]["properties"][property] = {
@@ -1602,6 +1767,7 @@ export default function NewBaseApp(props) {
                             dataMax: max,
                         },
                     };
+
                 }
             });
         });
@@ -1815,7 +1981,12 @@ export default function NewBaseApp(props) {
 
     return (
         <React.Fragment>
+
+
+
             
+            
+
             <CustomToolTip
                 hoveredDeviceInfo={hoveredDeviceInfo}
                 chartData={chartDataRef.current}
@@ -1852,17 +2023,24 @@ export default function NewBaseApp(props) {
                     deviceModels={deviceModelNames}
                     properties={propertyList}
 
+
+                    {...appStateRef.current}
+                    selectedDevice={selectedDevice}
+                    selectedPropertyId={heatmapOptions.selectedPropertyId}
                     devices={props.data.devicePanelData}
                     onNodeSelected={onNodeSelected}
                     onNavigateBack={navigateBackToDevices}
                     propertyIconMap={
                         props.propertyIconMap ? props.propertyIconMap : PropertyIconMap
                     }
-                    selectedGroupNode={selectedGroupNode}
                     currentDeviceData={currentDeviceDataRef.current}
+                    chartData={chartDataRef.current}
 
                 />
             )}
+
+                
+
             {selectedGroupNode && (
                 <HeatmapOptions
                     {...heatmapOptions}
@@ -1877,23 +2055,7 @@ export default function NewBaseApp(props) {
                     totalMarkers={4}
                 />
             )}
-            {props.data && props.data.devicePanelData && (
-                <DataPanelContainer
-                    {...appStateRef.current}
-                    selectedDevice={selectedDevice}
-                    selectedPropertyId={heatmapOptions.selectedPropertyId}
-                    devices={props.data.devicePanelData}
-                    onNodeSelected={onNodeSelected}
-                    onNavigateBack={navigateBackToDevices}
-                    propertyIconMap={
-                        props.propertyIconMap ? props.propertyIconMap : PropertyIconMap
-                    }
-                    selectedGroupNode={selectedGroupNode}
-                    currentDeviceData={currentDeviceDataRef.current}
-                    chartData={chartDataRef.current}
-                    eventBus={props.eventBus}
-                />
-            )}
+            
 
             <div className = "ONElogo">
                 <a href="https://www.oneltd.com/">    
@@ -1909,6 +2071,10 @@ export default function NewBaseApp(props) {
             <div className = "logo">
                 <img src={adskLogoSvg} alt="Autodesk Logo" />
             </div>
+
+
+            
+            
         </React.Fragment>
     );
 }

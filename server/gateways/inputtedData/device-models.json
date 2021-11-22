@@ -14,7 +14,7 @@
                 "rangeMax": "1"
             },
             {
-                "propertyId": "Occupancy Percentage",
+                "propertyId": "OccupancyPercentage",
                 "propertyName": "Occupancy Percentage",
                 "propertyDesc": "the percentage amount of time the object has been occupied given the chosen timeframe",
                 "propertyType": "double",
@@ -91,7 +91,7 @@
                 "rangeMax": "1000"
             },
             {
-                "propertyId": "Total Energy Consumption",
+                "propertyId": "Asset Energy Consumption",
                 "propertyName": "Total Energy Consumption",
                 "propertyDesc": "Average 'Power' value from across selected timeframe, multiplied by the selected amount of time in hours",
                 "propertyType": "double",

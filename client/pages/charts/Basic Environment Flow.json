@@ -1,0 +1,897 @@
+[
+    {
+        "id": "ea40e11a.717bd",
+        "type": "tab",
+        "label": "Basic Environment Flow",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "83a3abd3.0e24c8",
+        "type": "ui_gauge",
+        "z": "ea40e11a.717bd",
+        "name": "Concentration",
+        "group": "2b6938f.71750c8",
+        "order": 1,
+        "width": 8,
+        "height": 6,
+        "gtype": "gage",
+        "title": "Concentration",
+        "label": "PPM",
+        "format": "{{value}}",
+        "min": "0",
+        "max": "2550",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "600",
+        "seg2": "1200",
+        "x": 780,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "27522c58.8c45f4",
+        "type": "ui_gauge",
+        "z": "ea40e11a.717bd",
+        "name": "Humidity",
+        "group": "2b6938f.71750c8",
+        "order": 3,
+        "width": 8,
+        "height": 6,
+        "gtype": "gage",
+        "title": "Humidity",
+        "label": "%",
+        "format": "{{value}}",
+        "min": "0",
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "50",
+        "seg2": "60",
+        "x": 760,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "e064556.e11afa8",
+        "type": "ui_gauge",
+        "z": "ea40e11a.717bd",
+        "name": "Temperature",
+        "group": "2b6938f.71750c8",
+        "order": 2,
+        "width": 8,
+        "height": 6,
+        "gtype": "gage",
+        "title": "Temperature",
+        "label": "C",
+        "format": "{{value}}",
+        "min": "0",
+        "max": "50",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 770,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "8e29834f.6dd44",
+        "type": "function",
+        "z": "ea40e11a.717bd",
+        "name": "Concentration",
+        "func": "msg.payload=msg.payload.concentration.value\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 540,
+        "y": 120,
+        "wires": [
+            [
+                "83a3abd3.0e24c8",
+                "2c67564c.290d7a"
+            ]
+        ]
+    },
+    {
+        "id": "6aae13d5.987ddc",
+        "type": "function",
+        "z": "ea40e11a.717bd",
+        "name": "Humidity",
+        "func": "msg.payload=msg.payload.humidity.value\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 520,
+        "y": 320,
+        "wires": [
+            [
+                "27522c58.8c45f4",
+                "2402f0d6.e8f14"
+            ]
+        ]
+    },
+    {
+        "id": "6363fb10.64cf94",
+        "type": "function",
+        "z": "ea40e11a.717bd",
+        "name": "Temperature",
+        "func": "msg.payload=msg.payload.temperature.value\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 530,
+        "y": 220,
+        "wires": [
+            [
+                "e064556.e11afa8",
+                "bd72556a.727d38"
+            ]
+        ]
+    },
+    {
+        "id": "2c67564c.290d7a",
+        "type": "ui_chart",
+        "z": "ea40e11a.717bd",
+        "name": "Concentration",
+        "group": "2b6938f.71750c8",
+        "order": 4,
+        "width": 8,
+        "height": 6,
+        "label": "Concentration",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "1000",
+        "removeOlderUnit": "86400",
+        "cutout": 0,
+        "useOneColor": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "useOldStyle": false,
+        "outputs": 1,
+        "x": 780,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2402f0d6.e8f14",
+        "type": "ui_chart",
+        "z": "ea40e11a.717bd",
+        "name": "Humidity",
+        "group": "2b6938f.71750c8",
+        "order": 6,
+        "width": 8,
+        "height": 6,
+        "label": "Humidity",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "1000",
+        "removeOlderUnit": "86400",
+        "cutout": 0,
+        "useOneColor": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "useOldStyle": false,
+        "outputs": 1,
+        "x": 760,
+        "y": 340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "bd72556a.727d38",
+        "type": "ui_chart",
+        "z": "ea40e11a.717bd",
+        "name": "Temperature",
+        "group": "2b6938f.71750c8",
+        "order": 5,
+        "width": 8,
+        "height": 6,
+        "label": "Temperature",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "1000",
+        "removeOlderUnit": "86400",
+        "cutout": 0,
+        "useOneColor": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "useOldStyle": false,
+        "outputs": 1,
+        "x": 770,
+        "y": 240,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d081a494.1219c8",
+        "type": "ui_gauge",
+        "z": "ea40e11a.717bd",
+        "name": "MS Humidity",
+        "group": "922e64f6.1e95c8",
+        "order": 2,
+        "width": 8,
+        "height": 6,
+        "gtype": "gage",
+        "title": "Humidity",
+        "label": "%",
+        "format": "{{value}}",
+        "min": "0",
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "50",
+        "seg2": "60",
+        "x": 770,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "53d44d2.97ca7b4",
+        "type": "ui_gauge",
+        "z": "ea40e11a.717bd",
+        "name": "MS Temperature",
+        "group": "922e64f6.1e95c8",
+        "order": 1,
+        "width": 8,
+        "height": 6,
+        "gtype": "gage",
+        "title": "Temperature",
+        "label": "C",
+        "format": "{{value}}",
+        "min": "0",
+        "max": "50",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 780,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "5612cb08.067064",
+        "type": "function",
+        "z": "ea40e11a.717bd",
+        "name": "MS Humidity",
+        "func": "msg.payload=msg.payload.humidity.value\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 530,
+        "y": 560,
+        "wires": [
+            [
+                "d081a494.1219c8",
+                "8f9e9f7b.782b6"
+            ]
+        ]
+    },
+    {
+        "id": "640fa86e.dc0cc8",
+        "type": "function",
+        "z": "ea40e11a.717bd",
+        "name": "MS Temperature",
+        "func": "msg.payload=msg.payload.temperature.value\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 540,
+        "y": 460,
+        "wires": [
+            [
+                "53d44d2.97ca7b4",
+                "3cb985af.14d51a"
+            ]
+        ]
+    },
+    {
+        "id": "8f9e9f7b.782b6",
+        "type": "ui_chart",
+        "z": "ea40e11a.717bd",
+        "name": "MS Humidity",
+        "group": "922e64f6.1e95c8",
+        "order": 4,
+        "width": 8,
+        "height": 6,
+        "label": "Humidity",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "100",
+        "removeOlder": 1,
+        "removeOlderPoints": "1000",
+        "removeOlderUnit": "86400",
+        "cutout": 0,
+        "useOneColor": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "useOldStyle": false,
+        "outputs": 1,
+        "x": 770,
+        "y": 580,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3cb985af.14d51a",
+        "type": "ui_chart",
+        "z": "ea40e11a.717bd",
+        "name": "MS Temperature",
+        "group": "922e64f6.1e95c8",
+        "order": 3,
+        "width": 8,
+        "height": 6,
+        "label": "Temperature",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "50",
+        "removeOlder": 1,
+        "removeOlderPoints": "1000",
+        "removeOlderUnit": "86400",
+        "cutout": 0,
+        "useOneColor": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "useOldStyle": false,
+        "outputs": 1,
+        "x": 780,
+        "y": 480,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5ce403e0.299d1c",
+        "type": "ui_gauge",
+        "z": "ea40e11a.717bd",
+        "name": "MS Temperature",
+        "group": "d0040081.697b2",
+        "order": 1,
+        "width": 9,
+        "height": 6,
+        "gtype": "gage",
+        "title": "Temperature",
+        "label": "C",
+        "format": "{{value}}",
+        "min": "0",
+        "max": "50",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 780,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "9c1de3f8.e48d8",
+        "type": "function",
+        "z": "ea40e11a.717bd",
+        "name": "MS Temperature",
+        "func": "msg.payload=msg.payload.temperature.value\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 540,
+        "y": 700,
+        "wires": [
+            [
+                "5ce403e0.299d1c",
+                "ca49f615.96a2d8"
+            ]
+        ]
+    },
+    {
+        "id": "ca49f615.96a2d8",
+        "type": "ui_chart",
+        "z": "ea40e11a.717bd",
+        "name": "MS Temperature",
+        "group": "d0040081.697b2",
+        "order": 2,
+        "width": 9,
+        "height": 6,
+        "label": "Temperature",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "50",
+        "removeOlder": 1,
+        "removeOlderPoints": "1000",
+        "removeOlderUnit": "86400",
+        "cutout": 0,
+        "useOneColor": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "useOldStyle": false,
+        "outputs": 1,
+        "x": 780,
+        "y": 720,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c969eb6.78a9e18",
+        "type": "ui_gauge",
+        "z": "ea40e11a.717bd",
+        "name": "Temperature Probe 1",
+        "group": "91a2cda7.7f6f1",
+        "order": 1,
+        "width": 8,
+        "height": 6,
+        "gtype": "gage",
+        "title": "Temperature",
+        "label": "C",
+        "format": "{{value}}",
+        "min": "0",
+        "max": "50",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 800,
+        "y": 820,
+        "wires": []
+    },
+    {
+        "id": "57bcfd23.7030d4",
+        "type": "function",
+        "z": "ea40e11a.717bd",
+        "name": "Temperature Probe 1",
+        "func": "msg.payload=msg.payload.channel1.value\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 560,
+        "y": 840,
+        "wires": [
+            [
+                "c969eb6.78a9e18",
+                "24a542ff.f9748e"
+            ]
+        ]
+    },
+    {
+        "id": "24a542ff.f9748e",
+        "type": "ui_chart",
+        "z": "ea40e11a.717bd",
+        "name": "Temperature Probe 1",
+        "group": "91a2cda7.7f6f1",
+        "order": 4,
+        "width": 8,
+        "height": 6,
+        "label": "Temperature",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "50",
+        "removeOlder": 1,
+        "removeOlderPoints": "1000",
+        "removeOlderUnit": "86400",
+        "cutout": 0,
+        "useOneColor": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "useOldStyle": false,
+        "outputs": 1,
+        "x": 800,
+        "y": 860,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "758bc20d.aefcdc",
+        "type": "ui_gauge",
+        "z": "ea40e11a.717bd",
+        "name": "Temperature Probe 2",
+        "group": "91a2cda7.7f6f1",
+        "order": 2,
+        "width": 8,
+        "height": 6,
+        "gtype": "gage",
+        "title": "Temperature",
+        "label": "C",
+        "format": "{{value}}",
+        "min": "0",
+        "max": "50",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 800,
+        "y": 920,
+        "wires": []
+    },
+    {
+        "id": "12b08688.29ad69",
+        "type": "function",
+        "z": "ea40e11a.717bd",
+        "name": "Temperature Probe 2",
+        "func": "msg.payload=msg.payload.channel2.value\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 560,
+        "y": 940,
+        "wires": [
+            [
+                "758bc20d.aefcdc",
+                "b23309aa.5eca68"
+            ]
+        ]
+    },
+    {
+        "id": "b23309aa.5eca68",
+        "type": "ui_chart",
+        "z": "ea40e11a.717bd",
+        "name": "Temperature Probe 2",
+        "group": "91a2cda7.7f6f1",
+        "order": 6,
+        "width": 8,
+        "height": 6,
+        "label": "Temperature",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "50",
+        "removeOlder": 1,
+        "removeOlderPoints": "1000",
+        "removeOlderUnit": "86400",
+        "cutout": 0,
+        "useOneColor": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "useOldStyle": false,
+        "outputs": 1,
+        "x": 800,
+        "y": 960,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b0eabe21.21d8",
+        "type": "ui_gauge",
+        "z": "ea40e11a.717bd",
+        "name": "Temperature Probe 3",
+        "group": "91a2cda7.7f6f1",
+        "order": 3,
+        "width": 8,
+        "height": 6,
+        "gtype": "gage",
+        "title": "Temperature",
+        "label": "C",
+        "format": "{{value}}",
+        "min": "0",
+        "max": "50",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 800,
+        "y": 1020,
+        "wires": []
+    },
+    {
+        "id": "2d7a8c60.18fa94",
+        "type": "function",
+        "z": "ea40e11a.717bd",
+        "name": "Temperature Probe 3",
+        "func": "msg.payload=msg.payload.channel3.value\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 560,
+        "y": 1040,
+        "wires": [
+            [
+                "b0eabe21.21d8",
+                "626b1a00.945f68"
+            ]
+        ]
+    },
+    {
+        "id": "626b1a00.945f68",
+        "type": "ui_chart",
+        "z": "ea40e11a.717bd",
+        "name": "Temperature Probe 3",
+        "group": "91a2cda7.7f6f1",
+        "order": 5,
+        "width": 8,
+        "height": 6,
+        "label": "Temperature",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "50",
+        "removeOlder": 1,
+        "removeOlderPoints": "1000",
+        "removeOlderUnit": "86400",
+        "cutout": 0,
+        "useOneColor": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "useOldStyle": false,
+        "outputs": 1,
+        "x": 800,
+        "y": 1060,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2e40fbec.182cf4",
+        "type": "pressac-sensor",
+        "z": "ea40e11a.717bd",
+        "name": "Three Channel Temperature Sensor",
+        "gateway": "",
+        "sensors": "",
+        "list": "",
+        "x": 140,
+        "y": 940,
+        "wires": [
+            [
+                "2d7a8c60.18fa94",
+                "12b08688.29ad69",
+                "57bcfd23.7030d4"
+            ]
+        ]
+    },
+    {
+        "id": "fe15354.0b957c8",
+        "type": "pressac-sensor",
+        "z": "ea40e11a.717bd",
+        "name": "Mini Series Temperature",
+        "gateway": "",
+        "sensors": "",
+        "list": "",
+        "x": 110,
+        "y": 700,
+        "wires": [
+            [
+                "9c1de3f8.e48d8"
+            ]
+        ]
+    },
+    {
+        "id": "9086e04b.2b1b3",
+        "type": "pressac-sensor",
+        "z": "ea40e11a.717bd",
+        "name": "Mini Series Temperature and Humidity",
+        "gateway": "",
+        "sensors": "",
+        "list": "",
+        "x": 150,
+        "y": 500,
+        "wires": [
+            [
+                "640fa86e.dc0cc8",
+                "5612cb08.067064"
+            ]
+        ]
+    },
+    {
+        "id": "2621ee0f.d498f2",
+        "type": "pressac-sensor",
+        "z": "ea40e11a.717bd",
+        "name": "CO2, Temperature and Humidity",
+        "gateway": "",
+        "sensors": "",
+        "list": "",
+        "x": 130,
+        "y": 220,
+        "wires": [
+            [
+                "6363fb10.64cf94",
+                "6aae13d5.987ddc",
+                "8e29834f.6dd44"
+            ]
+        ]
+    },
+    {
+        "id": "2b6938f.71750c8",
+        "type": "ui_group",
+        "z": "",
+        "name": "CO2, Temperature and Humidity Sensor",
+        "tab": "8f284df7.03f1d",
+        "order": 1,
+        "disp": true,
+        "width": "24",
+        "collapse": false
+    },
+    {
+        "id": "922e64f6.1e95c8",
+        "type": "ui_group",
+        "z": "",
+        "name": "Mini Series Temperature and Humidity",
+        "tab": "8f284df7.03f1d",
+        "order": 3,
+        "disp": true,
+        "width": "16",
+        "collapse": false
+    },
+    {
+        "id": "d0040081.697b2",
+        "type": "ui_group",
+        "z": "",
+        "name": "Mini Series Temperature",
+        "tab": "8f284df7.03f1d",
+        "order": 4,
+        "disp": true,
+        "width": "9",
+        "collapse": false
+    },
+    {
+        "id": "91a2cda7.7f6f1",
+        "type": "ui_group",
+        "z": "",
+        "name": "Three Channel Temperature Sensor",
+        "tab": "8f284df7.03f1d",
+        "order": 2,
+        "disp": true,
+        "width": "24",
+        "collapse": false
+    },
+    {
+        "id": "8f284df7.03f1d",
+        "type": "ui_tab",
+        "z": "",
+        "name": "Basic Environmental Dashboard",
+        "icon": "dashboard",
+        "order": 3,
+        "disabled": false,
+        "hidden": false
+    }
+]

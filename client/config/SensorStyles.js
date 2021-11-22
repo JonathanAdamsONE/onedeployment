@@ -1,4 +1,8 @@
-import circleSvg from "../../assets/images/circle.svg";
+import circleSvg from       "../../assets/images/circle.svg";
+import OccupancyCircle from "../../assets/images/sensors/occupancySensor.svg";
+import HybridCircle from    "../../assets/images/sensors/hybridSensor.svg";
+import EnergyCircle from    "../../assets/images/sensors/energySensor.svg";
+
 import circleHighlightedSvg from "../../assets/images/circle_highlighted.svg";
 import temperatureSvg from "../../assets/images/temperature_property.svg";
 import humiditySvg from "../../assets/images/humidity_property.svg";
@@ -12,6 +16,24 @@ export const SpriteSize = 24;
  * @type {SensorStyleDefinitions}
  */
 export const SensorStyleDefinitions = {
+    "Test-Sensor-ID-Occupancy-Sensor": {
+        url: OccupancyCircle,
+        highlightedUrl: circleHighlightedSvg,
+        color: 0xffffff,
+        highlightedColor: 0xffffff,
+    },
+    "d370a293-4bd5-4bdb-a3df-376dc131d44c": {
+        url: HybridCircle,
+        highlightedUrl: circleHighlightedSvg,
+        color: 0xffffff,
+        highlightedColor: 0xffffff,
+    },
+    "Energy-Usage-Sensor": {
+        url: EnergyCircle,
+        highlightedUrl: circleHighlightedSvg,
+        color: 0xffffff,
+        highlightedColor: 0xffffff,
+    },
     default: {
         url: circleSvg,
         highlightedUrl: circleHighlightedSvg,

@@ -36,9 +36,12 @@ import chartsIconSvg from "../../assets/images/chartsIcon.svg";
 import sensorIconSvg from "../../assets/images/sensorIcon.svg";
 import searchIconSvg from "../../assets/images/search.svg";
 
+
+
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import { DevicePanel } from "forge-dataviz-iot-react-components";
+import { Dashboard } from "forge-dataviz-iot-react-components";
 
 /**
  * @returns {React.ReactFragment} The SvgIcon used to for the deviceButton.
@@ -94,14 +97,15 @@ function HyperionToolContainer(props) {
         occlusion: false,
         showTextures: true,
         showTimeLine: false,
-        showSensors: {
-            roomSensors: true,
-            hybridSensors: false,
-            occupancySensors: false,
-            energySensors: false
-        }
-
+        
+        roomSensors: true,
+        hybridSensors: false,
+        occupancySensors: false,
+        energySensors: false
+        
     };
+
+    const timeSettings = props.timeSettings;
 
     const eventBus = props.eventBus;
 
@@ -256,6 +260,18 @@ function HyperionToolContainer(props) {
             data: newSettings,
         });
     };
+
+    const handleTimeChange = (event) => {
+        let newTimeSettings = Object.assign({}, timeSettings);
+
+        newTimeSettings[event.target.name] = event.target.value;
+
+        dispatchEvent({
+            type: EventTypes.TIME_SETTINGS_CHANGED,
+            data: newTimeSettings,
+        });
+
+    }
 
     /**
      * Uses the Data Visualization Extension to reflect device settings in the scene.
@@ -565,7 +581,7 @@ function HyperionToolContainer(props) {
                                             <FormControlLabel
                                                     control={
                                                         <Checkbox
-                                                            checked={settings.showSensors.generalRoomSensors}
+                                                            checked={settings.generalRoomSensors}
                                                             onChange={handleSettingsChange}
                                                             name="generalRoomSensors"
                                                             size="small"
@@ -577,7 +593,7 @@ function HyperionToolContainer(props) {
                                                 <FormControlLabel
                                                     control={
                                                         <Checkbox
-                                                            checked={settings.showSensors.hybridSensors}
+                                                            checked={settings.hybridSensors}
                                                             onChange={handleSettingsChange}
                                                             name="hybridSensors"
                                                             size="small"
@@ -589,7 +605,7 @@ function HyperionToolContainer(props) {
                                                 <FormControlLabel
                                                     control={
                                                         <Checkbox
-                                                            checked={settings.showSensors.occupancySensors}
+                                                            checked={settings.occupancySensors}
                                                             onChange={handleSettingsChange}
                                                             name="occupancySensors"
                                                             size="small"
@@ -601,7 +617,7 @@ function HyperionToolContainer(props) {
                                                 <FormControlLabel
                                                     control={
                                                         <Checkbox
-                                                            checked={settings.showSensors.EnergySensors}
+                                                            checked={settings.energySensors}
                                                             onChange={handleSettingsChange}
                                                             name="energySensors"
                                                             size="small"
@@ -649,8 +665,9 @@ function HyperionToolContainer(props) {
                                 <ClickAwayListener onClickAway={handleSearchClickAway}>
                                     <Typography id="search-typography" component="div">
 
-                                        <FormGroup className="form-group">
-                                        {generatePanelContents()}
+                                        <FormGroup
+                >
+                                            {generatePanelContents()}
                                         </FormGroup>
                                     </Typography>
                                 </ClickAwayListener>
@@ -817,6 +834,8 @@ function HyperionToolContainer(props) {
                                             <Divider id="divider" />
                                             <input type="datetime-local" id="startTime"
                                                    name="startTime" value={(props.startTime.toISOString()).slice(0, -8)}
+                                                   max={(props.endTime.toISOString()).slice(0, -8)}
+                                                   onChange={handleTimeChange}
                                                    >
                                                    </input>
                                             <small> start date/time</small>
@@ -827,7 +846,9 @@ function HyperionToolContainer(props) {
                                             </FormLabel>
                                             <Divider id="divider" />
                                             <input type="datetime-local" id="endTime"
-                                                   name="endTime" value={(props.endTime.toISOString()).slice(0, -8)} 
+                                                   name="endTime" value={(props.endTime.toISOString()).slice(0, -8)}
+                                                   min={(props.startTime.toISOString()).slice(0, -8)} 
+                                                   onChange={handleTimeChange}
                                                    >
                                                    </input>
                                             <small> end date/time</small>
@@ -841,7 +862,9 @@ function HyperionToolContainer(props) {
                                             <Divider id="divider" />
                                             <input type="datetime-local" id="currentTime"
                                                    name="currentTime" value={(props.currentTime.toISOString()).slice(0, -8)}
-                                                   min={(props.startTime.toISOString()).slice(0, -8)} max={(props.endTime.toISOString()).slice(0, -8)}>
+                                                   min={(props.startTime.toISOString()).slice(0, -8)} max={(props.endTime.toISOString()).slice(0, -8)}
+                                                   onChange={handleTimeChange}
+                                                   >
                                             </input>
                                             <small> current date/time</small>
                                         </FormGroup>

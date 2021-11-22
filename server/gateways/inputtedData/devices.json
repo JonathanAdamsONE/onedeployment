@@ -1610,7 +1610,7 @@
         "deviceInfo": [
             {
                 "id": "Energy-1",
-                "name": "Energy Sensor 1",
+                "name": "Example Energy Sensor 1",
                 "position": {
                     "x":  "0",
                     "y": " -2.29658889770508",
@@ -1622,7 +1622,7 @@
             },
             {
                 "id": "Energy-2",
-                "name": "Energy Sensor 2",
+                "name": "Example Energy Sensor 2",
                 "position": {
                     "x":  "0",
                     "y": " -2.29658889770508",
@@ -1634,7 +1634,7 @@
             },
             {
                 "id": "Energy-3",
-                "name": "Energy Sensor 3",
+                "name": "Example Energy Sensor 3",
                 "position": {
                     "x":  "0",
                     "y": " -2.29658889770508",
@@ -1646,7 +1646,7 @@
             },
             {
                 "id": "Energy-4",
-                "name": "Energy Sensor 4",
+                "name": "Example Energy Sensor 4",
                 "position": {
                     "x":  "0",
                     "y": " -2.29658889770508",
@@ -1658,7 +1658,7 @@
             },
             {
                 "id": "Energy-5",
-                "name": "Energy Sensor 5",
+                "name": "Example Energy Sensor 5",
                 "position": {
                     "x":  "0",
                     "y": " -2.29658889770508",
@@ -1667,8 +1667,751 @@
                 "floorId": "L00",
                 "dbId": 4625,
                 "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Computer Energy-1",
+                "name": "Desk 1 Computer 1",
+                "position": {
+                    "x":  "0",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L01",
+                "dbId": 35699,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Computer Energy-2",
+                "name": "Desk 1 Computer 2",
+                "position": {
+                    "x":  "0",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L01",
+                "dbId": 35700,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Computer Energy-3",
+                "name": "Desk 2 Computer 1",
+                "position": {
+                    "x":  "0",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L01",
+                "dbId": 35706,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Computer Energy-4",
+                "name": "Desk 2 Computer 2",
+                "position": {
+                    "x":  "0",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L01",
+                "dbId": 35705,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Computer Energy-5",
+                "name": "Desk 3 Computer 1",
+                "position": {
+                    "x":  "0",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L01",
+                "dbId": 35712,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Computer Energy-6",
+                "name": "Desk 3 Computer 2",
+                "position": {
+                    "x":  "0",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L01",
+                "dbId": 35711,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Computer Energy-7",
+                "name": "Desk 4 Computer 1",
+                "position": {
+                    "x":  "0",
+                    "y": " -1.14829444885254",
+                    "z": " 0"
+                },
+                "floorId": "L01",
+                "dbId": 35717,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Computer Energy-8",
+                "name": "Desk 4 Computer 2",
+                "position": {
+                    "x":  "0",
+                    "y": " -1.14829444885254",
+                    "z": " 0"
+                },
+                "floorId": "L01",
+                "dbId": 35718,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Computer Energy-9",
+                "name": "Desk 5 Computer 1",
+                "position": {
+                    "x":  "0",
+                    "y": " -1.14829444885254",
+                    "z": " 0"
+                },
+                "floorId": "L01",
+                "dbId": 35723,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Computer Energy-10",
+                "name": "Desk 5 Computer 2",
+                "position": {
+                    "x":  "0",
+                    "y": " -1.14829444885254",
+                    "z": " 0"
+                },
+                "floorId": "L01",
+                "dbId": 35724,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Computer Energy-11",
+                "name": "Desk 6 Computer 1",
+                "position": {
+                    "x":  "0",
+                    "y": " -1.14829444885254",
+                    "z": " 0"
+                },
+                "floorId": "L01",
+                "dbId": 35729,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Computer Energy-12",
+                "name": "Desk 6 Computer 2",
+                "position": {
+                    "x":  "0",
+                    "y": " -1.14829444885254",
+                    "z": " 0"
+                },
+                "floorId": "L01",
+                "dbId": 35730,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Computer Energy-13",
+                "name": "Desk 7 Computer 1",
+                "position": {
+                    "x":  "0",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L01",
+                "dbId": 35790,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Computer Energy-14",
+                "name": "Desk 7 Computer 2",
+                "position": {
+                    "x":  "0",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L01",
+                "dbId": 35789,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Computer Energy-15",
+                "name": "Desk 8 Computer 1",
+                "position": {
+                    "x":  "0",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L01",
+                "dbId": 35796,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Computer Energy-16",
+                "name": "Desk 8 Computer 2",
+                "position": {
+                    "x":  "0",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L01",
+                "dbId": 35795,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Computer Energy-17",
+                "name": "Desk 9 Computer 1",
+                "position": {
+                    "x":  "0",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L01",
+                "dbId": 35802,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Computer Energy-18",
+                "name": "Desk 9 Computer 2",
+                "position": {
+                    "x":  "0",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L01",
+                "dbId": 35801,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Computer Energy-19",
+                "name": "Desk 10 Computer 1",
+                "position": {
+                    "x":  "0",
+                    "y": " -1.14829444885254",
+                    "z": " 0"
+                },
+                "floorId": "L01",
+                "dbId": 35807,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Computer Energy-20",
+                "name": "Desk 10 Computer 2",
+                "position": {
+                    "x":  "0",
+                    "y": " -1.14829444885254",
+                    "z": " 0"
+                },
+                "floorId": "L01",
+                "dbId": 35808,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Computer Energy-21",
+                "name": "Desk 11 Computer 1",
+                "position": {
+                    "x":  "0",
+                    "y": " -1.14829444885254",
+                    "z": " 0"
+                },
+                "floorId": "L01",
+                "dbId": 35813,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Computer Energy-22",
+                "name": "Desk 11 Computer 2",
+                "position": {
+                    "x":  "0",
+                    "y": " -1.14829444885254",
+                    "z": " 0"
+                },
+                "floorId": "L01",
+                "dbId": 35814,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Computer Energy-23",
+                "name": "Desk 12 Computer 1",
+                "position": {
+                    "x":  "0",
+                    "y": " -1.14829444885254",
+                    "z": " 0"
+                },
+                "floorId": "L01",
+                "dbId": 35819,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Computer Energy-24",
+                "name": "Desk 12 Computer 2",
+                "position": {
+                    "x":  "0",
+                    "y": " -1.14829444885254",
+                    "z": " 0"
+                },
+                "floorId": "L01",
+                "dbId": 35820,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Computer Energy-25",
+                "name": "Desk 13 Computer 1",
+                "position": {
+                    "x":  "0",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L01",
+                "dbId": 35754,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Computer Energy-26",
+                "name": "Desk 13 Computer 2",
+                "position": {
+                    "x":  "0",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L01",
+                "dbId": 35753,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Computer Energy-27",
+                "name": "Desk 14 Computer 1",
+                "position": {
+                    "x":  "0",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L01",
+                "dbId": 35760,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Computer Energy-28",
+                "name": "Desk 14 Computer 2",
+                "position": {
+                    "x":  "0",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L01",
+                "dbId": 35759,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Computer Energy-29",
+                "name": "Desk 15 Computer 1",
+                "position": {
+                    "x":  "0",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L01",
+                "dbId": 35766,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Computer Energy-30",
+                "name": "Desk 15 Computer 2",
+                "position": {
+                    "x":  "0",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L01",
+                "dbId": 35765,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Computer Energy-31",
+                "name": "Desk 16 Computer 1",
+                "position": {
+                    "x":  "0",
+                    "y": " -1.14829444885254",
+                    "z": " 0"
+                },
+                "floorId": "L01",
+                "dbId": 35771,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Computer Energy-32",
+                "name": "Desk 16 Computer 2",
+                "position": {
+                    "x":  "0",
+                    "y": " -1.14829444885254",
+                    "z": " 0"
+                },
+                "floorId": "L01",
+                "dbId": 35772,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Computer Energy-33",
+                "name": "Desk 17 Computer 1",
+                "position": {
+                    "x":  "0",
+                    "y": " -1.14829444885254",
+                    "z": " 0"
+                },
+                "floorId": "L01",
+                "dbId": 35777,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Computer Energy-34",
+                "name": "Desk 17 Computer 2",
+                "position": {
+                    "x":  "0",
+                    "y": " -1.14829444885254",
+                    "z": " 0"
+                },
+                "floorId": "L01",
+                "dbId": 35778,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Computer Energy-35",
+                "name": "Desk 18 Computer 1",
+                "position": {
+                    "x":  "0",
+                    "y": " -1.14829444885254",
+                    "z": " 0"
+                },
+                "floorId": "L01",
+                "dbId": 35783,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Computer Energy-36",
+                "name": "Desk 18 Computer 2",
+                "position": {
+                    "x":  "0",
+                    "y": " -1.14829444885254",
+                    "z": " 0"
+                },
+                "floorId": "L01",
+                "dbId": 35784,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Computer Energy-37",
+                "name": "Desk 19 Computer 1",
+                "position": {
+                    "x":  "0",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L01",
+                "dbId": 35736,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Computer Energy-38",
+                "name": "Desk 19 Computer 2",
+                "position": {
+                    "x":  "0",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L01",
+                "dbId": 35735,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Computer Energy-39",
+                "name": "Desk 20 Computer 1",
+                "position": {
+                    "x":  "0",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L01",
+                "dbId": 35742,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Computer Energy-40",
+                "name": "Desk 20 Computer 2",
+                "position": {
+                    "x":  "0",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L01",
+                "dbId": 35741,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Computer Energy-41",
+                "name": "Desk 21 Computer 1",
+                "position": {
+                    "x":  "0",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L01",
+                "dbId": 35748,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Computer Energy-42",
+                "name": "Desk 21 Computer 2",
+                "position": {
+                    "x":  "0",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L01",
+                "dbId": 35747,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Computer Energy-43",
+                "name": "Desk 22 Computer 1",
+                "position": {
+                    "x":  "-1.14829444885254",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L01",
+                "dbId": 35657,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Computer Energy-44",
+                "name": "Desk 22 Computer 2",
+                "position": {
+                    "x":  "-1.14829444885254",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L01",
+                "dbId": 35658,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Computer Energy-45",
+                "name": "Desk 23 Computer 1",
+                "position": {
+                    "x":  "0",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L01",
+                "dbId": 35646,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Computer Energy-46",
+                "name": "Desk 23 Computer 2",
+                "position": {
+                    "x":  "0",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L01",
+                "dbId": 35645,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Computer Energy-47",
+                "name": "Desk 24 Computer 1",
+                "position": {
+                    "x":  "0",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L01",
+                "dbId": 35652,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Computer Energy-48",
+                "name": "Desk 24 Computer 2",
+                "position": {
+                    "x":  "0",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L01",
+                "dbId": 35651,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Computer Energy-49",
+                "name": "Desk 25 Computer 1",
+                "position": {
+                    "x":  "0",
+                    "y": " -1.14829444885254",
+                    "z": " 0"
+                },
+                "floorId": "L01",
+                "dbId": 35663,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Computer Energy-50",
+                "name": "Desk 25 Computer 2",
+                "position": {
+                    "x":  "0",
+                    "y": " -1.14829444885254",
+                    "z": " 0"
+                },
+                "floorId": "L01",
+                "dbId": 35664,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Computer Energy-51",
+                "name": "Desk 26 Computer 1",
+                "position": {
+                    "x":  "0",
+                    "y": " -1.14829444885254",
+                    "z": " 0"
+                },
+                "floorId": "L01",
+                "dbId": 35669,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Computer Energy-52",
+                "name": "Desk 26 Computer 2",
+                "position": {
+                    "x":  "0",
+                    "y": " -1.14829444885254",
+                    "z": " 0"
+                },
+                "floorId": "L01",
+                "dbId": 35670,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Computer Energy-53",
+                "name": "Desk 27 Computer 1",
+                "position": {
+                    "x":  "-1.14829444885254",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L01",
+                "dbId": 35825,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Computer Energy-54",
+                "name": "Desk 27 Computer 2",
+                "position": {
+                    "x":  "-1.14829444885254",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L01",
+                "dbId": 35826,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Computer Energy-55",
+                "name": "Desk 28 Computer 1",
+                "position": {
+                    "x":  "0",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L01",
+                "dbId": 35676,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Computer Energy-56",
+                "name": "Desk 28 Computer 2",
+                "position": {
+                    "x":  "0",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L01",
+                "dbId": 35675,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Computer Energy-57",
+                "name": "Desk 29 Computer 1",
+                "position": {
+                    "x":  "0",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L01",
+                "dbId": 35682,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Computer Energy-58",
+                "name": "Desk 29 Computer 2",
+                "position": {
+                    "x":  "0",
+                    "y": " 0",
+                    "z": " 0"
+                },
+                "floorId": "L01",
+                "dbId": 35681,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Computer Energy-59",
+                "name": "Desk 30 Computer 1",
+                "position": {
+                    "x":  "0",
+                    "y": " -1.14829444885254",
+                    "z": " 0"
+                },
+                "floorId": "L01",
+                "dbId": 35687,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Computer Energy-60",
+                "name": "Desk 30 Computer 2",
+                "position": {
+                    "x":  "0",
+                    "y": " -1.14829444885254",
+                    "z": " 0"
+                },
+                "floorId": "L01",
+                "dbId": 35688,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Computer Energy-61",
+                "name": "Desk 31 Computer 1",
+                "position": {
+                    "x":  "0",
+                    "y": " -1.14829444885254",
+                    "z": " 0"
+                },
+                "floorId": "L01",
+                "dbId": 35693,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
+            },
+            {
+                "id": "Computer Energy-62",
+                "name": "Desk 31 Computer 2",
+                "position": {
+                    "x":  "0",
+                    "y": " -1.14829444885254",
+                    "z": " 0"
+                },
+                "floorId": "L01",
+                "dbId": 35694,
+                "lastActivityTime": "2020-10-15T02:43:14.8786418Z"
             }
-
         ]
     },
     {
