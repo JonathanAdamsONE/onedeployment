@@ -25,9 +25,13 @@ import { Viewer } from "forge-dataviz-iot-react-components";
 import { CustomToolTip } from "forge-dataviz-iot-react-components";
 import { DataPanelContainer } from "forge-dataviz-iot-react-components";
 import HyperionToolContainer from "./HyperionToolContainer.jsx";
+
 import adskLogoSvg from "../../assets/images/autodesk-logo.svg";
 import oneLogoSvg from "../../assets/images/One_Primary-White.svg";
 import cornerCirclesSvg from "../../assets/images/Corner Circles.svg";
+import blueCircleSvg from "../../assets/images/Blue.svg";
+import greyCircleSvg from "../../assets/images/Grey.svg";
+
 import { ChronosTimeSlider } from "forge-dataviz-iot-react-components";
 import { BasicDatePicker } from "forge-dataviz-iot-react-components";
 import { HeatmapOptions } from "forge-dataviz-iot-react-components";
@@ -2064,7 +2068,11 @@ export default function NewBaseApp(props) {
             </div>
 
             <div className = "headerCircle">
-                <img src={cornerCirclesSvg} alt="Corner Circles" />
+                <img src={blueCircleSvg} alt="Corner Circles" />
+            </div>
+
+            <div className = "blueCircle">
+                <img src={blueCircleSvg} alt="Blue Circle" />
             </div>
 
 

@@ -990,6 +990,62 @@ function HyperionToolContainer(props) {
                                                     label="Planar"
                                                 />
                                             </RadioGroup>
+
+                                            <FormLabel component="legend" id="form-label-hm">
+                                                Visible Sensor Types
+                                            </FormLabel>
+
+                                            <Divider id="divider" />
+
+                                            <FormControlLabel
+                                                    control={
+                                                        <Checkbox
+                                                            checked={settings.generalRoomSensors}
+                                                            onChange={handleSettingsChange}
+                                                            name="generalRoomSensors"
+                                                            size="small"
+                                                            color="default"
+                                                        />
+                                                    }
+                                                    label="General Room Sensors"
+                                                />
+                                                <FormControlLabel
+                                                    control={
+                                                        <Checkbox
+                                                            checked={settings.hybridSensors}
+                                                            onChange={handleSettingsChange}
+                                                            name="hybridSensors"
+                                                            size="small"
+                                                            color="default"
+                                                        />
+                                                    }
+                                                    label="Hybrid Temp, Humidity, C02 Sensors"
+                                                />
+                                                <FormControlLabel
+                                                    control={
+                                                        <Checkbox
+                                                            checked={settings.occupancySensors}
+                                                            onChange={handleSettingsChange}
+                                                            name="occupancySensors"
+                                                            size="small"
+                                                            color="default"
+                                                        />
+                                                    }
+                                                    label="Occupancy Sensors"
+                                                />
+                                                <FormControlLabel
+                                                    control={
+                                                        <Checkbox
+                                                            checked={settings.energySensors}
+                                                            onChange={handleSettingsChange}
+                                                            name="energySensors"
+                                                            size="small"
+                                                            color="default"
+                                                        />
+                                                    }
+                                                    label="Energy Sensors"
+                                                />
+
                                         </FormGroup>
                                     </Typography>
                                 </ClickAwayListener>

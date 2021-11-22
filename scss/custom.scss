@@ -14,7 +14,8 @@ body {
     //overflow: hidden;
     font-family: "nunito";
     color: #000000;
-    background-color: #1C3D61;
+    background: rgb(19,41,65);
+    background: linear-gradient(0deg, rgba(19,41,65,1) 0%, rgba(28,61,97,1) 50%, rgba(37,81,129,1) 100%);
 }
 
 input {
@@ -50,7 +51,7 @@ input {
     z-index: 0;
     top: 0px;
     left: 0px;
-
+    
 
     //width: 210px;
     //background-color: #255181; 
@@ -58,13 +59,20 @@ input {
     
 }
 
+.blueCircle {
+    height: 75%;
+    top: -25%;
+    left: -25%;
+    z-index: 0;
+}
+
 
 .ONElogo {
-    width: 220px;
-    top: 10px;
+    width: 140px;
+    top: 8px;
     position: absolute;
     z-index: 2;
-    left: 10px;
+    left: 8px;
     opacity: 0.85
 
 }
@@ -74,7 +82,8 @@ div.viewer-container {
     width: calc(100% - 75px) !important;
     height: calc(100% - #{$time_slider_height});
     //left: 0px;
-    top: calc(1.1% + 80px);
+    //top: calc(1.1% + 80px);
+    top: 75px;
 }
 
 #ContactUsBar + div.viewer-container {
@@ -110,7 +119,7 @@ div.viewer-container {
     //position: absolute;
     //top: #{50px + $time_slider_height};
     top: 130px;
-    left: 10px;
+    left: 8px;
     background-color: #1C3D61;
     //border-radius: 16px;
     //display: flex;
@@ -451,7 +460,7 @@ div#property-form.MuiFormControl-root, div#resolution-form.MuiFormControl-root {
     display: flex;
     align-items: center;
     font-weight: bold;
-    background-color: transparent;
+    background-color: #255181;
     padding: 15px 5px 15px 5px;
 }
 
