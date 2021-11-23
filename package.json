@@ -29,6 +29,7 @@
         "babel-loader": "^8.1.0",
         "concurrently": "^3.6.1",
         "css-loader": "3.6.0",
+        "grunt-package-minifier": "^0.2.1",
         "local-web-server": "4.2.1",
         "mini-css-extract-plugin": "^1.4.0",
         "node-loader": "^1.0.2",
@@ -40,7 +41,11 @@
         "svg-url-loader": "^7.1.1",
         "webpack": "^5.64.2",
         "webpack-cli": "^4.5.0",
-        "webpack-node-externals": "^1.7.2"
+        "webpack-node-externals": "^1.7.2",
+        "grunt": "~0.4.5",
+        "grunt-contrib-jshint": "~0.10.0",
+        "grunt-contrib-nodeunit": "~0.4.1",
+        "grunt-contrib-uglify": "~0.5.0"
     },
     "dependencies": {
         "@hig/theme-data": "^2.22.0",
